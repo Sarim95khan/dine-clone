@@ -4,7 +4,7 @@ import ProductList from './view/ProductList';
 import { client } from '../../sanity/lib/client';
 import { urlForImage } from '../../sanity/lib/image';
 
-export const getSsanityData = async () => {
+const getSsanityData = async () => {
   const res = await client.fetch(`*[_type =='product']{
     _id,
     name,
